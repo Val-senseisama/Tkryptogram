@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require("express");
-import { engine } from 'express-handlebars';
+const engine = require('express-handlebars');
 const path = require('path');
 const https = require("https");
 const bodyParser = require("body-parser");
