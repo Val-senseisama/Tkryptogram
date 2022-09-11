@@ -100,7 +100,7 @@ app.get("/", function(req, res) {
              });
               response.on("end", function(){
                 const coins = JSON.parse(Buffer.concat(resData).toString());   
-                res.render("views/index", {coins});       
+                res.render("index", {coins});       
               });
            }); 
         
