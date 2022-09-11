@@ -1,0 +1,49 @@
+<%- include ("partials/Header") -%> 
+<div class="container">
+<div class="row dep">
+    <div class="col-lg-5 wallet transact">
+        <h2>Withdraw</h2> <a href="/Deposit"><button class="btn btn-lg butto sign-butt">Deposit</button></a>
+        <div class="balance"><p>Account Balance:<span> <%= accountBalance %> </span>BTC</p> 
+            <p class="small-text">Estimated Value in USD: <%= estimtedValue  %> </p>
+        </div>
+        <p>Please do not withdraw to crowdfunded accounts or ICO address, as your account will not be credited with tokens from such sales</p>
+    </div>
+    <div class="col-lg-5 wallet">
+        <div >
+                  <form action="/withdraw" method="post" class="withdrawal-form">
+                    <label for="recipientWallet">Recipient BTC Address</label>
+                    <input class="form-control" type="text" name="recepientWallet" value="<%=  btcAddress %> ">
+                    <label for="amount">Amount (BTC)</label>
+                    <input class="form-control" type="text" name="amount" id="amountToWithdraw">
+                    <span style="color: red;">Please enter an amount no higher than your available balance</span><br>
+                    Minimum withdrawal: 0.00000000BTC <br>
+
+                    Transaction Fee: 10% of withdrawal (<span id="fee">0.00000000BTC</span>)
+                    You will get: <span id="gains">0.00000000</span>BTC
+                    </p>
+
+                    <button type="submit" class="btn btn-lg butto sign-butt">Submit</button>
+                  </form>
+            
+            
+                
+               
+                  </div>
+
+        </div>
+
+        
+        <div class="col-lg-5 wallet">
+            <div>
+                <div class="alert">
+                    <i class="fa-solid fa-5x fa-circle-exclamation"></i>
+                     <div class="alert-back">
+                        <p>You need to contact your account manager before any withdrawals can be made</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include ("partials/footer") -%> 

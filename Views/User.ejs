@@ -1,0 +1,33 @@
+<%- include ("partials/Header") -%> 
+<div class="container">
+    <div class="row dash">
+        <div class="wallet col-lg-5">
+            <h4 class="Account">Account details</h4>
+
+            <hr>
+            <h2><%= name %> </h2>
+            <p class="balance">User Id: <%= id %></p>
+            <p class="balance">User bitcoin Wallet: <%= cryptoWallet %> </p>
+            <div class="balance"><p>Account Balance:<span> <%= balance %> </span>BTC</p> </div>
+           
+           <p class="balance">Estimated Value in USD: </p>
+        </div>
+
+        <div class="col-lg-5 act">
+            <h4 class="Account">Account Activity</h4> <hr>
+            <div class="activity"></div>
+        </div>
+
+        <div class="wallet col-lg-5">
+            <h4 class="Account">Change Balance</h4>
+
+            <hr>
+            <form action="/users/:userId?_method=PATCH" method="post">
+                <input type="number" name="update" placeholder="New balance">
+                <button type="submit" class="btn btn-md sign-butt">Login</button>
+            </form>
+           
+        </div>
+     </div>
+</div>
+<%- include ("partials/Footer") -%> 

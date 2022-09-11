@@ -1,0 +1,39 @@
+<%- include ("partials/Header") -%> 
+<div class="container">
+    
+    <div class="row dep">
+        <div class="col-lg-6 transact">
+            <h2>Deposit</h2> <a href="/Withdraw"><button class="btn btn-lg butto sign-butt">Withdraw</button></a>
+            <p>Available Balance</p>
+            <div class="balance"><p>Account Balance:<span> <%= accountBalance %> </span>BTC</p> 
+                <p class="subscript">Estimated Value in USD</p>
+            </div>
+            <ul>
+                <li>Coin will be deposited after <span class="imp">1</span> network confirmations.</li>
+                <li>Untill <span class="imp">2</span> confirmations are made, an equivalent amount of your assets would be temporarily unavailable for withdrawals</li>
+            </ul>
+        </div>
+        <div class="col-lg-6">
+            <div class="deposit">
+                <div class="alert">
+                    <i class="fa-solid fa-5x fa-circle-exclamation"></i>
+                     <div class="alert-back">
+                        <p>You need to contact your account manager before any deposits can be made</p>
+                    </div>
+                </div>
+                <div id="qrcode">
+                  <img src="/public/images//IMG_20220810_233928_927.jpg" alt=""> 
+                </div>
+                <div class="addressDiv">
+                    
+                    <p id="walletAddress"> bbc1q9xud8d78ctpycl76mvm0gvjlkzceqn4cs8x2zu </p>
+                      <button id="copyButton" onclick="copyFunction()"><i class="fa-solid fa-copy"></i></button>
+                      </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <hr>
+<script src="script.js"></script>
+<%- include ("partials/Footer") -%> 

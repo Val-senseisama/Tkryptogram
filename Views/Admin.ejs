@@ -1,0 +1,19 @@
+<%- include ("partials/Header") -%> 
+<div class="container">
+    <h1>Welcome Admin-chan</h1>
+    <div class="charts"></div>
+    <div class="accounts">
+
+        <% users.forEach(function(user) { %> 
+            <div class="user-row">
+            <a href="/users/<%=user.id%>"> <%= user._id %>  </a>
+
+                  <p class="accountOwner"><%=  user.name %></p> 
+
+                <p class="adBalance"><%= user.balance %> </p> 
+            </div>
+          <% }); %> 
+
+    </div>
+</div>
+<%- include ("partials/Footer") -%> 

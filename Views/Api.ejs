@@ -1,0 +1,52 @@
+
+
+<div>
+    <div class="coin-container">
+        <div class="coin-row coin">
+            <h1>Asset</h1>
+            <h1 class="end">Price</h1>
+            <h1 class="ender">24H Change</h1>   
+        </div>
+        <% coins.forEach(function(coin){ %>
+        <div class="coin-row">
+            <div class="coin">
+               
+                <img src="<%=  coin.image %>" alt="<%= coin.id %>">
+                
+                <h1> <%= coin.id %> </h1>
+                <p class="coin-symbol"><%=  coin.symbol %></p>
+            </div>
+            <div class="coin-data">
+                <p class="price">$<%=  coin.current_price %></p>         
+                 <%if (coin.price_change_24h > 1) { %>
+                    <p class="coin-percent green"><%= coin.price_change_24h.toFixed(2)+"%" %></p>
+                    <%} else{ %> 
+                        <p class="coin-percent red"><%= coin.price_change_24h.toFixed(2)+"%" %></p>
+                    <% } %>
+
+                    
+                    <% if (coin.id === 'bitcoin'){ %> 
+                        <% let conversionRate = coin.current_price; %> 
+                    <% console.log(conversionRate); }%> 
+                        
+
+                       
+                       
+
+                     
+            </div>
+           
+        </div>
+        <% });%>
+    
+        
+                
+    </div>      
+      
+</div>
+
+
+
+
+
+

@@ -1,0 +1,612 @@
+:root{
+    --landing-color: #012232;
+}
+body{
+    background-color: #f6f6f6;
+}
+#title {
+    color: #c48a1f;
+    font-weight: bold;
+    margin: 5px, 10px;
+    background-color: #000;
+}
+
+#title a{
+    text-decoration: none;
+    color: #c48a1f;
+    padding: 5px, 10px;
+}
+
+.nav-item{
+    padding-right: 20px;
+}
+
+
+#landing {
+    height: 89vh;
+    width: 100%;
+    background-image: url("../images/pexels-karolina-grabowska-5980743.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 0, 20px;
+    font-size: 1em;
+}
+
+.butto {
+    font-size: 1em;
+    padding: 5px, 10px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.register-butt {
+    color: #c48a1f;
+    background-color: #000;
+}
+
+.register-butt a{
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #c48a1f;
+    text-decoration: none;
+}
+.sign-butt a{
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #000;
+    text-decoration: none;
+}
+
+.sign-butt{
+    background-color: #c48a1f;
+    color: #000;
+}
+
+#content{
+    background-color: fffdfd;
+    text-align: center;
+    padding-top: 30px; 
+    padding-bottom: 30px;
+}
+
+.fa-solid{
+    color: #c48a1f;
+}
+
+.heading{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.card-deck{
+  margin: 0, auto;
+}
+
+.card {
+    background-color: #000;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    padding-bottom: 30px;
+    color: #f6f6f6;
+}
+
+.trades {
+    padding: 20px;
+    color: #c48a1f;
+}
+
+.stats-table{
+    margin-top: 30px;
+    background-color: #000;
+    color: #f6f6f6;
+    width: 100% !important;
+}
+
+.statsTable{
+    margin: 40px auto;
+}
+
+.statsTable section#title {
+    display: none;
+}
+
+.statsTable footer{
+    display: none;
+}
+
+.card-body{
+    background-color: #f6f6f6;
+    color: #000;
+}
+
+#trade-easily.container h2{
+    color: #f6f6f6;
+}
+
+#trade-easily.container{
+    padding-bottom: 30px;
+}
+
+.testimonies{
+    margin-top: -30px;
+    background-color: #c48a1f;
+    text-align: center;
+}
+
+.testimonial-text{
+    padding-bottom: 30px;
+    padding-left: 86px;
+    padding-right: 86px;
+}
+
+footer{
+    background-color: #000;
+}
+
+footer a{
+    text-decoration: none;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #f6f6f6;
+    font-size: 1em;
+}
+
+footer a h3{
+    margin-left: 30px;
+}
+footer a ul{
+    list-style: none;
+}
+
+.foo {
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+footer h3{
+    padding-top: 30px;
+}
+
+footer a:hover{
+    text-decoration: none;
+    color: #f6f6f6;
+}
+
+.subscript {
+    text-align: center;
+    font-size: 12px;
+}
+
+.back{
+    background-color: #000;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border: #c48a1f 1px solid;
+    border-radius: 5%;
+    margin: 63px auto;
+    min-width: 60vw;
+    padding-bottom: 20px;
+}
+
+.des{
+    color: #c48a1f;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.brand {
+    margin-top: 10px;
+    padding-bottom: 0;
+}
+
+.ins{
+    margin-top: -10px;
+}
+.form-tab{
+  max-width: 55vw;
+  margin:10px auto;
+  padding: 15px 30px 25px ;
+  border: #c48a1f 1px solid;
+  border-radius: 5%;
+}
+
+.form-group{
+    padding: 10px 5px;
+    font-size: 1em;
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.form-tab input{
+    background-color: #000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: #c48a1f 1px solid;
+    padding: 10px;
+    height: 18px;
+    font-size: 16px;
+}
+.form-tab a{
+    text-decoration: none;
+    color: #c48a1f;
+    font-size: 0.6em;
+}
+
+.form-tab button{
+    margin-top: 10px;
+    padding: 5px 20px; 
+}
+
+.buttons{
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h3.Account{
+    font-size: 2.5rem;
+    padding: 0;
+    margin: 20px;
+}
+
+@media screen and (max-width: 987px) {
+    .act{
+        margin-left: 30px;
+        
+    }  
+    .wallet{
+        margin-right: 40px;
+    }
+}
+
+.wallet{
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    padding: 30px;
+    margin: 30px 0;
+    margin-right: auto;
+}
+
+.act{
+    margin: 20px;
+}
+
+.Account{
+    text-align: center;
+    font-size: 20px;
+}
+
+.wallet button{
+    float: right;
+    margin-top: 20px;
+    margin-left: 10px;
+    transform: scale(89%);
+}
+
+.balance{
+    margin: 30px 20px 20px 0;
+    font-size: 0.8em;
+}
+
+.balance span{
+    font-size: 1.6em;
+}
+
+.submitButt{
+    position: relative;
+    top: -1.6rem;
+}
+
+.details{
+    padding-top: 1em;
+}
+
+.logout{
+    margin: 30px 7px;
+}
+
+.act{
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    padding: 30px;
+    margin: 30px 0;
+}
+
+.dep{
+    margin-top: 30px;
+}
+
+.dep button{
+    float: right;
+    margin-right: 20px;
+}
+
+.transact{
+    margin-top: 30px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    padding: 20px;
+    border-radius: 5%;
+}
+
+.deposit{
+    margin-left: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    padding: 40px;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.alert{
+    color: red;
+    background-color: rgba(255,255,255,0.5);
+    /* position: absolute; */
+    z-index: 3;
+    font-size: 20px;
+    text-align: center;
+    margin-top: -15px;
+    margin-left: -30px;
+    padding: 10px;
+    min-height: 85%;
+}
+
+.fa-circle-exclamation{
+    color: #721c24;
+    margin: 20px;
+}
+
+.alert p{
+    padding: 20px;
+    margin: 10px;
+    font-weight: 700;
+}
+
+.alert-back{
+    background-color: #f7d6d9;
+    width: 95%;
+    border-radius: 10%;
+}
+
+#qrcode img{
+    height: 200px;
+    width: 200px;
+    align-self: center;
+    margin: 30px auto 20px auto;
+}
+
+#walletAddress{
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.addressDiv{
+    margin: auto;
+    width: 35%;
+    padding-right: 20px;
+}
+
+.coin-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #000;
+    color: #fff;
+    border-radius: 30px;
+    padding: 20px; 
+}
+
+.coin-row{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+    align-items: center;
+    height: 80px;
+    border-bottom: 1px solid #c48a1f;
+    margin: 10px auto;
+}
+
+.coin{
+    display: flex;
+    align-items: center;
+    padding-right: 24px;
+    min-width: 150px;
+}
+
+.coin-row h2{
+    font-size: 20px;
+    padding-left: 10px;
+    text-align: center;
+}
+.end{
+    margin-inline-start: 90px;
+}
+
+.coin h1 {
+    padding-right: 10px;
+    font-size: 16px;
+    width: 85px;
+}
+
+
+.coin img{
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+}
+
+.coin-symbol{
+    padding-left: 10px;
+    padding-right: 5px;
+    text-transform: uppercase;
+}
+
+.coin-data{
+    display: flex;
+    text-align: center;
+}
+
+.coin-price{
+    width: 110px;
+}
+
+.coin-volume{
+    width: 150px;
+}
+
+.coin-marketCap{
+    width: 240px;
+    margin-right: 70px !important;
+}
+
+.coin-percent {
+    width: 80px;
+}
+
+.red{
+    color: #f00606;
+}
+
+.green{
+    color: #11d811;
+}
+
+@media(min-width: 750px){
+    /* .coin-container{
+        width: 75vw;
+    }
+
+    .coin-row{
+        width: 73vw;
+    } */
+
+    .coin h1{
+        width: 12vw;
+    }
+
+    .price{
+        width: 12vw;
+        margin-left: 6vw;
+    }
+
+    .coin-percent {
+        margin-left: 4vw;
+        width: 16vw;
+    }
+
+    .end{
+        margin-left: 16vw;
+    }
+
+    .ender{
+        margin-left: 6vw;
+    }
+}
+
+.imp{
+    color: #c48a1f;
+}
+
+#copyButton{
+    border: none;
+}
+
+.accounts{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(255, 249, 249);
+    color: rgb(16, 16, 16);
+    border-radius: 30px;
+    padding: 20px; 
+    margin-bottom: 40px;
+}
+
+.user-row{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    height: 80px;
+    border-bottom: 1px solid #c48a1f;
+    margin: 10px 5px;
+    width: 90%;
+}
+
+.user-row a{
+    text-decoration: none;
+    color: rgb(16, 16, 16);
+    margin-top: 10px;
+    padding-right: 10px;
+    font-size: 0.7em;
+}
+
+.accountOwner{
+    width: 20vw;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding-right: 10px;
+    font-size: 1em;
+}
+
+.adBalance{
+    margin: 30px 10px 20px 0;
+    padding-right: 10px;
+    font-size: 0.7em;
+}
+
+#message{
+    font-size: 1em;
+    text-align: center;
+    padding: 5px auto;
+    color: red;
+    background-color: rgb(229, 115, 134);
+}
+
+.activity{
+    width: 100%;
+}
+.activity ul{
+   list-style: none;
+   font-size: 0.98em;
+   padding-left: 0;
+}
+
+.activity li{
+    width: 100%;
+    padding: 10px;
+}
+
+.activity ul :nth-child(1){
+    background-color: rgb(177, 175, 175);
+}
+
+form label{
+    font-size: 0.6em;
+}
+
+.small-text{
+    font-size: 0.75em;
+}
+
+.withdrawal-form{
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5%;
+}

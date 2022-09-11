@@ -1,0 +1,49 @@
+<%- include ("partials/Header") -%> 
+<div class="container">
+    <h3 class="Account">Welcome</h3>
+    <div class="row">
+        <div class="wallet col-lg-6">
+            <h4 class="Account">Account details</h4>
+            <a href="/Deposit"><button type="submit" class="btn btn-lg butto register-butt">Deposit</button></a> <a href="/Withdraw"><button class="btn btn-lg butto sign-butt">Withdraw</button></a>
+            <hr>
+            
+            <h3><%= name %> </h3>
+            <div class="details">
+                
+                <p> Wallet Address: <%= cryptoWallet %> </p>
+                <form action="/dashboard?_method=PATCH" method="post">
+                    
+                    <input type="text" placeholder="Bitcoin Wallet Address" name="walletId">
+                    <button type="submit" class="btn submitButt btn-lg butto sign-butt" >Update</button>
+                </form>
+                    <div class="balance">
+                   <p>Account Balance:<span> <%= accountBalance %> </span>BTC</p> 
+                   
+                   <p>Estimated Value in USD: <span> <%= conversionRate.toLocaleString('en-Us',{style:'currency', currency:'USD'}) %> </span></p>
+                </div>
+                </div>
+            
+         
+        </div>
+        <div class="col-lg-5 act">
+            <h4 class="Account">Account Activity</h4> <hr>
+            <div class="activity">
+                <ul>
+                    <% for (var i = 0; i < activity.length; i++) { %>
+                        <li> <%= activity[i] %> </li>
+                    <% } %>
+                </ul>
+             
+                  
+                    
+            </div>
+        </div>
+        <div class="stats-table col-lg-12 col-sm-12">
+            <h2 style="text-align: center; margin-top:20px;">Stay current with our real time charts</h2>
+            <%- include ("Api") -%> 
+        </div>
+       
+    </div>
+    <button class="btn btn-lg butto register-butt logout"><a href="/logout">Logout</a></button>
+</div>
+<%- include ("partials/Footer") -%> 
