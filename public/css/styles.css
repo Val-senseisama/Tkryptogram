@@ -352,14 +352,15 @@ h3.Account{
 }
 
 .alert{
+    margin: 0 auto;
     color: red;
     background-color: rgba(255,255,255,0.5);
     /* position: absolute; */
     z-index: 3;
     font-size: 20px;
     text-align: center;
-    margin-top: -15px;
-    margin-left: -30px;
+/*     margin-top: -15px;
+    margin-left: -30px; */
     padding: 10px;
     min-height: 85%;
 }
@@ -394,8 +395,7 @@ h3.Account{
 }
 
 .addressDiv{
-    margin: auto;
-    width: 35%;
+    margin-left:-25px;
     padding-right: 20px;
 }
 
