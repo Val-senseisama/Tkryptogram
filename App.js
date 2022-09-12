@@ -203,7 +203,7 @@ app.patch("/dashboard", function(req, res){
 
 app.get("/Deposit", function(req,res){
     if(err){
-        res.redirect("/login"):
+        res.redirect("/login");
     }else{
     console.log(req.user);
         res.render("Deposit",{
