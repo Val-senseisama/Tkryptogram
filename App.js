@@ -19,7 +19,6 @@ const app = express();
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname + '/public')));
-app.use('/public/images/', express.static('./public/images'));
 app.set('views', path.join(__dirname+'/Views'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride('_method'))
