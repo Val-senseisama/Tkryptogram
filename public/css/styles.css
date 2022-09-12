@@ -25,7 +25,7 @@ body{
 #landing {
     height: 89vh;
     width: 100%;
-    background-image: url("../images/pexels-karolina-grabowska-5980743.jpg");
+    background-image: url("/images/pexels-karolina-grabowska-5980743.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
