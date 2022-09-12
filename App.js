@@ -202,10 +202,14 @@ app.patch("/dashboard", function(req, res){
 });
 
 app.get("/Deposit", function(req,res){
+    if(err){
+        res.redirect("/login"):
+    }else{
     console.log(req.user);
         res.render("Deposit",{
             accountBalance:req.user.balance
         });
+    }
 });
 
 app.get("/withdraw", function(req, res){
@@ -228,7 +232,11 @@ app.get("/withdraw", function(req, res){
                             estimtedValue: currentRate * req.user.balance,
                             btcAddress: req.user.wallet
                          });
-                    }});
+                    } else{
+                        consolle.log(err);
+                        res.redirect("/login");
+                    }
+                   });
                   
                 });
             })
@@ -280,7 +288,10 @@ job.start();
 
 app.get("/users/:userId", function(req, res){
     let userId = req.params.userId;
-    User.findOne({id: userId}, function(err, user){
+    User.findOne({_id: userId}, function(err, user){
+        if(err){
+            console.log(err)
+        }else{
         res.render("User",{
             name:user.name,
             id:user.id,
@@ -288,7 +299,8 @@ app.get("/users/:userId", function(req, res){
             balance:user.balance,
             accountActivity: user.activity,
             usdBalance: currentRate*user.balance
-        })
+        });
+        }
     })  
 })
 
