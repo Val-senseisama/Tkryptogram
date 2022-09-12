@@ -18,8 +18,8 @@ const CronJob = require("cron").CronJob;
 const app = express();
 
 app.set("view engine", "ejs");
-app.use(express.static(path.join(__dirname+'../public')));
-app.set('views', path.join(__dirname+'../views'));
+app.use(express.static(path.join(__dirname+'/public')));
+app.set('views', path.join(__dirname+'/views'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride('_method'))
 
