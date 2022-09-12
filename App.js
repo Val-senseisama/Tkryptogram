@@ -212,7 +212,7 @@ app.get("/Deposit", function(req,res){
     }
 });
 
-app.get("/withdraw", function(req, res){
+app.get("/Withdraw", function(req, res){
     console.log(req.user);
     const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false";
         https.get(url, function(response){
@@ -246,7 +246,7 @@ app.get("/withdraw", function(req, res){
 
 
 
-app.post("/withdraw", function(req, res){
+app.post("/Withdraw", function(req, res){
     let amount = req.body.amount;
     User.update({_id:req.user.id}, {$push: {activity: "Requested to withdraw"+ amount+"BTC" + " on " + new Date().toJSON()}})
     res.redirect("withdraw");
