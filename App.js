@@ -228,33 +228,33 @@ app.get("/Deposit", function(req,res){
 
 app.get("/Withdraw", function(req, res){
     console.log(req.user);
-    const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false";
-        https.get(url,{credentials: 'include'}, function(response){
-                console.log(response.statusCode);
-                const resData = [];
+//     const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false";
+//         https.get(url,{credentials: 'include'}, function(response){
+//                 console.log(response.statusCode);
+//                 const resData = [];
    
-                response.on('data', (chunk) => {
-                   resData.push(chunk);
-               });
-                response.on("end", function(){
-                  const coins = JSON.parse(Buffer.concat(resData).toString()); 
+//                 response.on('data', (chunk) => {
+//                    resData.push(chunk);
+//                });
+//                 response.on("end", function(){
+//                   const coins = JSON.parse(Buffer.concat(resData).toString()); 
                   
-                   coins.forEach(function(coin){
-                    if(coin.id === 'bitcoin'){
-                        let currentRate = coin.current_price;
+//                    coins.forEach(function(coin){
+//                     if(coin.id === 'bitcoin'){
+//                         let currentRate = coin.current_price;
                         res.render("Withdraw", {
                             accountBalance: req.user.balance,
-                            estimtedValue: currentRate * req.user.balance,
+//                             estimtedValue: currentRate * req.user.balance,
                             btcAddress: req.user.wallet
                          });
-                    } else{
-                        console.log(err);
-                        res.redirect("/login");
-                    }
-                   });
+//                     } else{
+//                         console.log(err);
+//                         res.redirect("/login");
+//                     }
+//                    });
                   
-                });
-            })
+//                 });
+//             })
     
 });
 
