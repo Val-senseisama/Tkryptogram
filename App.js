@@ -1,5 +1,6 @@
 require("dotenv").config();
 const express = require("express");
+const cookieParser = require('cookie-parser')
 const path = require('path');
 const https = require("https");
 const bodyParser = require("body-parser");
@@ -22,7 +23,7 @@ app.use(express.static(path.join(__dirname + '/public')));
 app.set('views', path.join(__dirname+'/Views'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride('_method'))
-
+app.use(express.cookieParser());
 app.use(session({
     secret:process.env.SECRET,
     resave:false,
