@@ -214,8 +214,9 @@ app.get("/Deposit", function(req,res){
     console.log(req.user);
         res.render("Deposit",{
             accountBalance:req.user.balance  
+            });
     }else{  
-        res.redirect("/login");});
+        res.redirect("/login");
     }
 });
 
