@@ -147,7 +147,7 @@ app.post("/login", function(req, res){
             }
          });
         }
-        req.session.user= user;
+        req.session.user= req.user;
     });
 });
 
