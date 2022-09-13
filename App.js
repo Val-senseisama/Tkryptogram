@@ -210,14 +210,10 @@ app.patch("/dashboard", function(req, res){
 });
 
 app.get("/Deposit", function(req,res){
-    if(!err){
     console.log(req.user);
         res.render("Deposit",{
             accountBalance:req.user.balance  
             });
-    }else{  
-        res.redirect("/login");
-    }
 });
 
 app.get("/Withdraw", function(req, res){
