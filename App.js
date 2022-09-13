@@ -33,24 +33,24 @@ app.use(flash());
 
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(cors({
+// app.use(cors({
 //     origin: '*',
-    credentials: true, 
-    origin: true
-}));
+//     credentials: true, 
+//     origin: true
+// }));
 
-app.use((req, res, next) => {
-  let allowedOrigins = ['http://localhost:3000', 'http://localhost:8080', "https://drab-cyan-lion-coat.cyclic.app"];
-  let origin = req.headers.origin;
-  if(allowedOrigins.indexOf(origin) > -1){
-       res.setHeader('Access-Control-Allow-Origin', origin);
-  }
-  //res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
-  res.header('Access-Control-Allow-Credentials', true);
-  next();
-});
+// app.use((req, res, next) => {
+//   let allowedOrigins = ['http://localhost:3000', 'http://localhost:8080', "https://drab-cyan-lion-coat.cyclic.app"];
+//   let origin = req.headers.origin;
+//   if(allowedOrigins.indexOf(origin) > -1){
+//        res.setHeader('Access-Control-Allow-Origin', origin);
+//   }
+//   //res.setHeader('Access-Control-Allow-Origin', '*');
+//   res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
+//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+//   res.header('Access-Control-Allow-Credentials', true);
+//   next();
+// });
 
 mongoose.connect(process.env.MONGOOSE_CONCETION_STRING, {useNewUrlParser: true});
 
