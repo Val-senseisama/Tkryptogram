@@ -49,7 +49,13 @@ app.use(passport.session());
 //   next();
 // });
 app.use(flash());
-mongoose.connect(process.env.MONGOOSE_CONCETION_STRING, {useNewUrlParser: true});
+mongoose.connect(process.env.MONGOOSE_CONCETION_STRING,
+                 {
+    useNewUrlParser: true,
+    socketTimeoutMS: 45000,
+    keepAlive: true,
+    reconnectTries: 10
+});
 
 const userSchema = new mongoose.Schema ({
     name:String,
