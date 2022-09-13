@@ -29,8 +29,6 @@ app.use(session({
     resave:false,
     saveUninitialized:false,
 }));
-app.use(flash());
-
 app.use(passport.initialize());
 app.use(passport.session());
 // app.use(cors({
@@ -51,7 +49,7 @@ app.use(passport.session());
 //   res.header('Access-Control-Allow-Credentials', true);
 //   next();
 // });
-
+app.use(flash());
 mongoose.connect(process.env.MONGOOSE_CONCETION_STRING, {useNewUrlParser: true});
 
 const userSchema = new mongoose.Schema ({
