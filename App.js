@@ -1,6 +1,5 @@
 require("dotenv").config();
 const express = require("express");
-const cookieParser = require('cookie-parser')
 const path = require('path');
 const https = require("https");
 const bodyParser = require("body-parser");
@@ -22,8 +21,8 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname + '/public')));
 app.set('views', path.join(__dirname+'/Views'));
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(methodOverride('_method'))
-app.use(express.cookieParser());
+app.use(methodOverride('_method'));
+
 app.use(session({
     secret:process.env.SECRET,
     resave:false,
@@ -31,24 +30,8 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-// app.use(cors({
-//     origin: '*',
-//     credentials: true, 
-//     origin: true
-// }));
 
-// app.use((req, res, next) => {
-//   let allowedOrigins = ['http://localhost:3000', 'http://localhost:8080', "https://drab-cyan-lion-coat.cyclic.app"];
-//   let origin = req.headers.origin;
-//   if(allowedOrigins.indexOf(origin) > -1){
-//        res.setHeader('Access-Control-Allow-Origin', origin);
-//   }
-//   //res.setHeader('Access-Control-Allow-Origin', '*');
-//   res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
-//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
-//   res.header('Access-Control-Allow-Credentials', true);
-//   next();
-// });
+
 app.use(flash());
 mongoose.connect(process.env.MONGOOSE_CONCETION_STRING,
                  {
@@ -63,8 +46,7 @@ const userSchema = new mongoose.Schema ({
     wallet:{type:String, default:"Please update your wallet address"},
     balance:{type:Number, default:"0.0000000"},
     password:String,
-    activity:[],
-   
+    activity:[]   
 });
 
 userSchema.plugin(passportLocalMongoose);
