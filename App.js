@@ -201,7 +201,7 @@ app.patch("/dashboard", function(req, res){
                 });
 });
 
-app.get("/Deposit", function(req,res){
+app.get("/Deposit", function(req,res,err){
     if(err){
         res.redirect("/login");
     }else{
