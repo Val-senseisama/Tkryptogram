@@ -53,8 +53,7 @@ mongoose.connect(process.env.MONGOOSE_CONCETION_STRING,
                  {
     useNewUrlParser: true,
     socketTimeoutMS: 45000,
-    keepAlive: true,
-    reconnectTries: 10
+    keepAlive: true
 });
 
 const userSchema = new mongoose.Schema ({
