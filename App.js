@@ -1,5 +1,6 @@
 require("dotenv").config();
 const express = require("express");
+const cors = require('cors');
 const path = require('path');
 const https = require("https");
 const bodyParser = require("body-parser");
@@ -32,6 +33,12 @@ app.use(flash());
 
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(cors({
+//     origin: '*',
+    credentials: true, 
+    origin: true
+}));
+
 
 mongoose.connect(process.env.MONGOOSE_CONCETION_STRING, {useNewUrlParser: true});
 
@@ -50,6 +57,7 @@ const User = new mongoose.model("User", userSchema)
 passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+
 
 
 const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false";
@@ -201,14 +209,13 @@ app.patch("/dashboard", function(req, res){
                 });
 });
 
-app.get("/Deposit", function(req,res,err){
-    if(err){
-        res.redirect("/login");
-    }else{
+app.get("/Deposit", function(req,res){
+    if(!err){
     console.log(req.user);
         res.render("Deposit",{
-            accountBalance:req.user.balance
-        });
+            accountBalance:req.user.balance  
+    }else{  
+        res.redirect("/login");});
     }
 });
 
