@@ -167,7 +167,7 @@ app.post("/login", function(req, res){
             }
          });
         }
-        req.session.user= req.user;
+        
     });
 });
 
@@ -203,7 +203,7 @@ app.get("/Dashboard", function(req, res){
              });
           
            });
-        
+        req.session.user= req.user;
    }else{res.redirect("/login");
 }
 });
