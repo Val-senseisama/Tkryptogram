@@ -250,7 +250,7 @@ app.get("/Withdraw", function(req, res){
                             btcAddress: req.user.wallet
                          });
                     } else{
-                        consolle.log(err);
+                        console.log(err);
                         res.redirect("/login");
                     }
                    });
