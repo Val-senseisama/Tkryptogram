@@ -154,7 +154,8 @@ app.post("/login", function(req, res){
         }
         
     });
-});
+}let req.session.user = req.user;
+        );
 
 app.get("/Dashboard", function(req, res){
     if (req.isAuthenticated()){
@@ -188,7 +189,7 @@ app.get("/Dashboard", function(req, res){
              });
           
            });
-        req.session.user= req.user;
+        
    }else{res.redirect("/login");
 }
 });
