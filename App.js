@@ -144,13 +144,13 @@ app.post("/login", function(req, res){
         if(err){
             console.log(err);
         }else{passport.authenticate("local-login", { failureRedirect: "/login", failureFlash:true, failureMessage: req.flash('message', 'Invalid Username or password')})(req, res, function(){
-            req.session.user = req.user;
             if(req.body.username === admin){
                 res.redirect("admin")
             }else{
                 User.update({_id:req.user.id}, {$push: {activity: "Logged in from"+ req.ip + " on " + new Date().toJSON()}})
                 res.redirect("Dashboard");
             }
+         Const req.session.user = req.user;
           req.session.save();
          });
         }
@@ -199,7 +199,7 @@ app.get("/Dashboard", function(req, res){
 
 app.patch("/dashboard", function(req, res){
     let walletId = req.body.walletId;
-                User.update({_id:req.user._id}, {$set: {wallet: walletId}}, function(err){
+                User.update({id:req.user._id}, {$set: {wallet: walletId}}, function(err){
                     if(err){console.log(err);
                     }else{
                      User.update({_id:req.user.id}, {$push: {activity: "Updated wallet address to"+ walletId + " on " + new Date().toJSON()}})
