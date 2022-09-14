@@ -328,9 +328,9 @@ app.get("/logout", function(req, res){
 
        
 const port = process.env.PORT || 3000;
-if(port == null || port ==""}(
+if(port == null || port ==""){
 port = 3000
-)
+}
 app.listen(port, function() {
     console.log("Server's running on port");
 });
