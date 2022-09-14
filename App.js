@@ -144,7 +144,7 @@ app.post("/login", function(req, res){
         if(err){
             console.log(err);
         }else{passport.authenticate("local-login", { failureRedirect: "/login", failureFlash:true, failureMessage: req.flash('message', 'Invalid Username or password')})(req, res, function(){
-           let req.session.user = req.user;
+            req.session.user = req.user;
             if(req.body.username === admin){
                 res.redirect("admin")
             }else{
