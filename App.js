@@ -150,7 +150,7 @@ app.post("/login", function(req, res){
                 User.update({_id:req.user.id}, {$push: {activity: "Logged in from"+ req.ip + " on " + new Date().toJSON()}})
                 res.redirect("Dashboard");
             }
-         Const req.session.user = req.user;
+         Let req.session.user = req.user;
           req.session.save();
          });
         }
