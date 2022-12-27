@@ -264,7 +264,7 @@ app.get("/admin", function(req, res) {
 
 // let growthFunction =  
 const job = new CronJob(
-    '0 0 0 * * *' ,
+    '0 0 * * *' ,
     function(){ 
         User.find({},"name balance", function(err, users){  
             users.map(function(user){
